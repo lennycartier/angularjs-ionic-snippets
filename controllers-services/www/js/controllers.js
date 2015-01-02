@@ -8,13 +8,6 @@ angular.module('starter.controllers', [])
 	$scope.simplebinding = "toto";
 })
 
-.controller('functionCtrl', ['$window', '$scope', function($window, $scope) {
-	$scope.result = function() {
-		$scope.name = 'World';
-		$window.alert('toto' + $scope.name);
-	};
-}])
-
 .controller('ExampleController1', ['$window', '$scope', function($window, $scope) {
   $scope.name = 'World';
 
