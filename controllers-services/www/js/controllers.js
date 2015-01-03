@@ -10,20 +10,20 @@ angular.module('starter.controllers', [])
 
 .controller('ExampleController1', ['$window', '$scope', function($window, $scope) {
   $scope.name = 'World';
-
   $scope.alertbox = function() {
     alert('Hello ' + $scope.name);
-  };
+  }
 }])
 
 .controller('ExampleController2', ['$window', '$scope', function($window, $scope) {
     $scope.result = function() {
     alert(2 + 2);
-  };
+	}
 }])
 
 .controller('ExampleController3', ['$scope', 'calculate', function($scope, calculate) {
 		$scope.serviceresult = function(number) {
 			calculate(number);
-			};
+			}
 }]);
+

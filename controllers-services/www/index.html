@@ -27,39 +27,43 @@
 	<!-- services -->
 	<script src="js/services.js"></script>
 
-
   </head>
+  
   <body ng-app="starter">
+  <ion-pane>
+  <ion-header-bar class="bar-stable">
+	  <h1 class="title">Ionic Blank Starter</h1>
+  </ion-header-bar>
 
-    <ion-pane>
-      <ion-header-bar class="bar-stable">
-        <h1 class="title">Ionic Blank Starter</h1>
-      </ion-header-bar>
-      <ion-content>
-	  	<div ng-controller="sampleCtrl">
-			Element :
-			<ion-list>
-				<ion-item ng-repeat="item in items">
-					 {{item.item}}
-				</ion-item>
-			</ion-list>
-		</div>
-		<div ng-controller="simpleBinding">
-			<p> Simple text binding : {{simplebinding}} </p>
-		</div>
-		<div ng-controller="ExampleController1">
-			<p> The alert is from a function <p>
-				<button class="button button-clear button-positive" ng-click="alertbox()">Push</button>
-		</div>
-		<div ng-controller="ExampleController2">
-			<p> The result is from a function <p>
-				<button class="button button-clear button-positive" ng-click="result()">Push</button>
-		</div>
-		<div ng-controller="ExampleController3">
-      <p> The result is from a function + service </p>
-        <button class="button button-clear button-positive" ng-click="serviceresult(2)">Push</button>
-    </div>
-      </ion-content>
-    </ion-pane>
+<ion-content>
+<div class="card">
+  <div class="item item-text-wrap">
+    Simple ionic, angularjs demos
+  </div>
+</div>
+
+
+	<div ng-controller="simpleBinding" class="item">
+	  Simple text binding : {{simplebinding}}
+	</div>
+	<div ng-controller="ExampleController1" class="item item-button-right">
+  	  The alert is from a function <button class="button button-positive" on-touch="alertbox();">Push</button>
+	</div>
+  	<div ng-controller="ExampleController2" class="item item-button-right">
+	  The result is from a function <button class="button button-positive" on-touch="result();">Push</button>
+  	</div>
+  	<div ng-controller="ExampleController3" class="item item-button-right">
+	  The result is from a function + service <button class="button button-positive" on-touch="serviceresult(2);">Push</button>
+  	</div>
+
+<div ng-controller="sampleCtrl">
+	List of items :
+	<ion-list>
+		<ion-item ng-repeat="item in items">{{item.item}}</ion-item>
+	</ion-list>
+</div>
+
+</ion-content>
+</ion-pane>
   </body>
 </html>
