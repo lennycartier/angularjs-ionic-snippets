@@ -30,40 +30,20 @@
   </head>
   
   <body ng-app="starter">
-  <ion-pane>
-  <ion-header-bar class="bar-stable">
-	  <h1 class="title">Ionic Blank Starter</h1>
-  </ion-header-bar>
+    <!--
+      The nav bar that will be updated as we navigate between views.
+    -->
+    <ion-nav-bar class="bar-stable">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+    </ion-nav-bar>
+	<!--
+		The views will be rendered in the <ion-nav-view> directive below
+		Templates are in the /templates folder (but you could also
+		have templates inline in this html file if you'd like).
+		-->
+		<ion-nav-view>
+		</ion-nav-view>
 
-<ion-content>
-<div class="card">
-  <div class="item item-text-wrap">
-    Simple ionic, angularjs demos
-  </div>
-</div>
-
-
-	<div ng-controller="simpleBinding" class="item">
-	  Simple text binding : {{simplebinding}}
-	</div>
-	<div ng-controller="ExampleController1" class="item item-button-right">
-  	  The alert is from a function <button class="button button-positive" on-touch="alertbox();">Push</button>
-	</div>
-  	<div ng-controller="ExampleController2" class="item item-button-right">
-	  The result is from a function <button class="button button-positive" on-touch="result();">Push</button>
-  	</div>
-  	<div ng-controller="ExampleController3" class="item item-button-right">
-	  The result is from a function + service <button class="button button-positive" on-touch="serviceresult(2);">Push</button>
-  	</div>
-
-<div ng-controller="sampleCtrl">
-	List of items :
-	<ion-list>
-		<ion-item ng-repeat="item in items">{{item.item}}</ion-item>
-	</ion-list>
-</div>
-
-</ion-content>
-</ion-pane>
-  </body>
+ </body>
 </html>
