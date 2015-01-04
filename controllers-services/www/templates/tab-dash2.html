@@ -1,0 +1,17 @@
+<ion-view view-title="Dashboard 2">
+  <ion-content class="padding">
+  
+  <div class="card">
+    <div class="item item-text-wrap">
+      Simple ionic, angularjs demos 
+    </div>
+  </div>
+  
+   	<div ng-controller="sampleCtrl">
+   	List of items :
+   	<ion-list>
+   		<ion-item ng-repeat="item in items">{{item.item}}</ion-item>
+   	</ion-list>
+   </div> 
+  </ion-content>
+</ion-view>

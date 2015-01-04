@@ -5,7 +5,7 @@ angular.module('starter.controllers', [])
 })
 
 .controller('simpleBinding', function($scope) {
-	$scope.simplebinding = "toto";
+	$scope.simplebinding = "text binding";
 })
 
 .controller('ExampleController1', ['$window', '$scope', function($window, $scope) {
