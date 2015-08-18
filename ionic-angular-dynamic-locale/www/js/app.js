@@ -17,17 +17,27 @@ angular.module('starter', ['ionic', 'tmh.dynamicLocale'])
     }
   })
 })
+
+.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider, tmhDynamicLocaleProvider) {
+  tmhDynamicLocaleProvider.localeLocationPattern('js/i18n/angular-locale_{{locale}}.js');
+})
+
 .controller('indexCtrl', function($scope, tmhDynamicLocale) {
 
+  $scope.amount = "10";
+
   $scope.currencies = [
-    { id : '0', name : 'British pound', symbol : '£', code : 'en-gb' },
-    { id : '1', name : 'Euro', symbol : '€', code : 'fr-fr' },
-    { id : '2', name : 'Indian rupee', symbol : 'Rp', code : 'hi-in' },
-    { id : '3', name : 'USD', symbol : '$', code : 'en-us' },
-    { id : '4', name : "Yen", symbol : "¥", code : 'ja-jp' },
-    { id : '5', name : "Yuan", symbol : "¥", code : 'zh-cn' }
+    { id : '0', name : 'Euro', symbol : '€', code : 'fr-fr' },
+    { id : '1', name : 'USD', symbol : '$', code : 'en-us' },
   ];
 
-  $scope.currencySelected = $scope.currencies[0];
 
+
+  $scope.changeLocale = function(currencySelected) {
+    if (currencySelected.name == "Euro") {
+      tmhDynamicLocale.set('fr-fr');
+  } else if (currencySelected.name == "USD") {
+      tmhDynamicLocale.set('en-us');
+    }
+  }
 })

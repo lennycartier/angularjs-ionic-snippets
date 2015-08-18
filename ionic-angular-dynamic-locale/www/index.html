@@ -31,7 +31,10 @@
         <h1 class="title">Ionic + Blank Starter</h1>
       </ion-header-bar>
       <ion-content ng-controller="indexCtrl">
-        Locale selector <select ng-model="currencySelected" ng-options="currency.name for currency in currencies track by currency	.id" ng-change="selectCurrency(currency);">
+        <p>An amount of {{amount | currency}}</p>
+        <p>Locale selector <select ng-model="currencySelected" ng-options="currency.name for currency in currencies track by currency.id" ng-change="changeLocale(currencySelected)" /></p>
+
+
       </ion-content>
     </ion-pane>
   </body>

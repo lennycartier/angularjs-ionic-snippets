@@ -2,5 +2,15 @@
 
 !.gitignore
 !controllers-services/www
-!angularjs-ionic-snippets/www
+!ionic-angular-dynamic-locale/config.xml
+!ionic-angular-dynamic-locale/gulpfile.js
+!ionic-angular-dynamic-locale/hooks
+!ionic-angular-dynamic-locale/ionic.project
+!ionic-angular-dynamic-locale/package.json
+!ionic-angular-dynamic-locale/scss
+!ionic-angular-dynamic-locale/www/css
+!ionic-angular-dynamic-locale/www/img
+!ionic-angular-dynamic-locale/index.html
+!ionic-angular-dynamic-locale/js/app.js
+!ionic-angular-dynamic-locale/js/i18n
 
