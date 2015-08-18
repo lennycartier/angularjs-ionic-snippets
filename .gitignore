@@ -1,3 +1,6 @@
-*.keystore
-*.sw*
-controllers-services/platforms/
+*
+
+!.gitignore
+!controllers-services/www
+!angularjs-ionic-snippets/www
+
