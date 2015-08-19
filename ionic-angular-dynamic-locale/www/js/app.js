@@ -19,7 +19,7 @@ angular.module('starter', ['ionic', 'tmh.dynamicLocale'])
 })
 
 .config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider, tmhDynamicLocaleProvider) {
-  tmhDynamicLocaleProvider.localeLocationPattern('js/i18n/angular-locale_{{locale}}.js');
+  tmhDynamicLocaleProvider.localeLocationPattern('https://code.angularjs.org/1.3.18/i18n/angular-locale_{{locale}}.js');
 })
 
 .controller('indexCtrl', function($scope, tmhDynamicLocale) {

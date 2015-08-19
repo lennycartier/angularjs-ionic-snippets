@@ -32,7 +32,7 @@
       </ion-header-bar>
       <ion-content ng-controller="indexCtrl">
         <p>An amount of {{amount | currency}}</p>
-        <p>Locale selector <select ng-model="currencySelected" ng-options="currency.name for currency in currencies track by currency.id" ng-change="changeLocale(currencySelected)" /></p>
+        <p>Locale selector <select ng-model="currencySelected" ng-options="currency.name for currency in currencies" ng-change="changeLocale(currencySelected)" /></p>
 
 
       </ion-content>
