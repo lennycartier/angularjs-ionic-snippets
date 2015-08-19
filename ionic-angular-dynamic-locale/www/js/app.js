@@ -22,22 +22,15 @@ angular.module('starter', ['ionic', 'tmh.dynamicLocale'])
   tmhDynamicLocaleProvider.localeLocationPattern('https://code.angularjs.org/1.3.18/i18n/angular-locale_{{locale}}.js');
 })
 
-.controller('indexCtrl', function($scope, tmhDynamicLocale) {
+.controller('indexCtrl', function($rootScope, $scope, tmhDynamicLocale, $locale) {
 
   $scope.amount = "10";
+  $scope.currencies = {
+    'fr-fr': 'French',
+    'en-us': 'US' };
+  $rootScope.model = {currencySelected: 'en-us'};
+  $rootScope.$locale = $locale;
+  $rootScope.changeLocale = tmhDynamicLocale.set;
 
-  $scope.currencies = [
-    { id : '0', name : 'Euro', symbol : '€', code : 'fr-fr' },
-    { id : '1', name : 'USD', symbol : '$', code : 'en-us' },
-  ];
 
-
-
-  $scope.changeLocale = function(currencySelected) {
-    if (currencySelected.name == "Euro") {
-      tmhDynamicLocale.set('fr-fr');
-  } else if (currencySelected.name == "USD") {
-      tmhDynamicLocale.set('en-us');
-    }
-  }
 })
