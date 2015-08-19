@@ -32,21 +32,20 @@
       </ion-header-bar>
       <ion-content ng-controller="indexCtrl">
         	<div class="list">
-            <label class="item item-input item-select">
-            <div class="input-label">
-              Select locale
-            </div>
-            <select ng-model="model.currencySelected" ng-options="key as value for (key, value) in currencies" ng-change="changeLocale(model.currencySelected)" />
-          </label>
+
+        <div class="item item-input item-select">
+          <div class="input-label">
+            Select locale
+          <select ng-model="model.currencySelected" ng-options="key as value for (key, value) in currencies" ng-change="changeLocale(model.currencySelected)"></select>
           </div>
-          <ul class="list">
-            <li class="item">
+        </div>
+          <div class="item">
             <p>An amount of {{amount | currency}}</p>
             <p>A date {{0 | date}}</p>
-          </li>
-        </ul>
-      </item>
+          </div>
       </div>
+
+
       </ion-content>
     </ion-pane>
   </body>
