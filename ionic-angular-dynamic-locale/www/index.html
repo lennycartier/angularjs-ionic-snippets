@@ -31,10 +31,22 @@
         <h1 class="title">Ionic + Blank Starter</h1>
       </ion-header-bar>
       <ion-content ng-controller="indexCtrl">
-        <p>An amount of {{amount | currency}}</p>
-        <p>Locale selector <select ng-model="currencySelected" ng-options="currency.name for currency in currencies" ng-change="changeLocale(currencySelected)" /></p>
-
-
+        	<div class="list">
+            <label class="item item-input item-select">
+            <div class="input-label">
+              Select locale
+            </div>
+            <select ng-model="model.currencySelected" ng-options="key as value for (key, value) in currencies" ng-change="changeLocale(model.currencySelected)" />
+          </label>
+          </div>
+          <ul class="list">
+            <li class="item">
+            <p>An amount of {{amount | currency}}</p>
+            <p>A date {{0 | date}}</p>
+          </li>
+        </ul>
+      </item>
+      </div>
       </ion-content>
     </ion-pane>
   </body>
